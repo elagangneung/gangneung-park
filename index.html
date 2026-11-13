@@ -116,7 +116,7 @@ const SURV = [{"id": "01", "pages": 24, "cover": 9, "name": "교동3근린공원
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const fmt = n => n == null ? '-' : n.toLocaleString('ko-KR', {maximumFractionDigits: 1});
-const img = (id, p) => `${id}/p-${String(p).padStart(2,'0')}.jpg`;
+const img = (id, p) => `${id <= "04" ? "" : "slides/"}${id}/p-${String(p).padStart(2,'0')}.jpg`;
 const kakao = addr => 'https://map.kakao.com/?q=' + encodeURIComponent(addr.startsWith('강릉') ? addr : '강릉시 ' + addr);
 
 // 관리대장 연결
